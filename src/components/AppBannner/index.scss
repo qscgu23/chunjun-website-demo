@@ -1,0 +1,88 @@
+.container {
+  background-color: #060718;
+  height: calc(100vh);
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @media screen and (max-width: 1361px) {
+    flex-direction: column-reverse;
+    padding-bottom: 30px;
+  }
+  &__wrapper {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 200px;
+    @media screen and (max-width: 676px) {
+      padding: 0 80px;
+    }
+    @media screen and (max-width: 450px) {
+      padding: 0 20px;
+    }
+    &--title {
+      color: var(--white-bg);
+      font-size: 35px;
+      & span {
+        font-weight: bold;
+        font-family: "ZCOOL QingKe HuangYou", cursive;
+      }
+      & #flink {
+        background-image: linear-gradient(
+          to right,
+          var(--hover-text-color),
+          #5352ed
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+        margin: 0 4px;
+      }
+      @media screen and (max-width: 1504px) {
+        font-size: 24px;
+      }
+    }
+    &--subtitle {
+      background-image: linear-gradient(to right, #3498db, #20bf6b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: 40px;
+      letter-spacing: 4px;
+      @media screen and (max-width: 1504px) {
+        font-size: 30px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    &--buttons {
+      margin-top: 30px;
+      @media screen and (max-width: 1504px) {
+        text-align: center;
+      }
+      & button {
+        &:first-child {
+          margin-right: 30px;
+          @media screen and (max-width: 1504px) {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  &__banner {
+    width: 50%;
+    @media screen and (max-width: 1361px) {
+      height: 100%;
+      width: auto;
+    }
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

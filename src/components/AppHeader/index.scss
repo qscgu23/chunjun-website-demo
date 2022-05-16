@@ -1,0 +1,130 @@
+.header {
+  height: 64px;
+  background-color: var(--dark-bg);
+
+  z-index: 100;
+
+  &__drawer {
+    & .mantine-tbarly {
+      .drawer__header {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        letter-spacing: 4px;
+        font-family: "ZCOOL QingKe HuangYou", cursive;
+      }
+
+      .drawer__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &--link {
+          font-size: 18px;
+          color: #333;
+          font-weight: 600;
+          font-family: "Josefin Sans", sans-serif;
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+          &:hover {
+            color: var(--hover-text-color);
+          }
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    margin: 0 10%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &--link {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white-color);
+      position: relative;
+      font-family: "Josefin Sans", sans-serif;
+      display: inline-block;
+    }
+    & div.another__wrapper {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 50%;
+      & .header__wrapper--link {
+        transition: all 0.3s ease-in-out;
+        letter-spacing: 3px;
+        &:hover {
+          color: var(--hover-text-color);
+          ::after {
+            width: 100%;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--hover-text-color);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      @media screen and (max-width: 1344px) {
+        display: none;
+      }
+    }
+    & .function__wrapper {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1 1 0%;
+      &--item:not(:last-child) {
+        margin-right: 20px;
+        @media screen and (max-width: 676px) {
+          margin-right: 10px;
+        }
+      }
+
+      & .burger {
+        display: none;
+        @media screen and (max-width: 1344px) {
+          display: inline-block;
+        }
+      }
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: "ZCOOL QingKe HuangYou", cursive;
+      font-size: 22px;
+      letter-spacing: 10px;
+      height: 100%;
+      & img {
+        margin: 0;
+      }
+      & span {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(to right, #3498db, #20bf6b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        @media screen and (max-width: 485px) {
+          letter-spacing: -1px;
+        }
+        @media screen and (max-width: 450px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
