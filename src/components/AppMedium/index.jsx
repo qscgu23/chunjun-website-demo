@@ -8,7 +8,11 @@ const AppMedium = () => {
         <h1 className="second__title">Why Chunjun?</h1>
         <div className="second__wrapper">
           <div className="second__wrapper--card">
-            <img src={require("../../assets/img/nat-1.png").default} alt="" />
+            <img
+              className="second__wrapper--img"
+              src={require("../../assets/img/nat-1.png").default}
+              alt=""
+            />
             <h3 className="card__title">轻松上手</h3>
             <p className="card__text" style={{ color: "#00b3f9" }}>
               基于json,sql
@@ -17,7 +21,11 @@ const AppMedium = () => {
             </p>
           </div>
           <div className="second__wrapper--card">
-            <img src={require("../../assets/img/nat-2.png").default} alt="" />
+            <img
+              className="second__wrapper--img"
+              src={require("../../assets/img/nat-2.png").default}
+              alt=""
+            />
             <h3 className="card__title">基于 Flink</h3>
             <p className="card__text" style={{ color: "#6349bf" }}>
               构建于flink之上，基于flink 原生的input,output
@@ -26,7 +34,11 @@ const AppMedium = () => {
             </p>
           </div>
           <div className="second__wrapper--card">
-            <img src={require("../../assets/img/nat-3.png").default} alt="" />
+            <img
+              className="second__wrapper--img"
+              src={require("../../assets/img/nat-3.png").default}
+              alt=""
+            />
             <h3 className="card__title">功能丰富</h3>
             <p className="card__text" style={{ color: "#29dde8" }}>
               支持原生FlinkSql所有语法和特性的计算框架，提供多种数据源之间数据传输，断点续传，增量同步，实时采集
