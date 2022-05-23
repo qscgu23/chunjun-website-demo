@@ -88,3 +88,11 @@ a:link {
 .btn__white {
   background-color: var(--white-bg);
 }
+
+.section__title {
+  text-align: center;
+  font-size: 35px;
+  text-transform: capitalize;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+}

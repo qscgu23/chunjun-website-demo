@@ -1,5 +1,6 @@
 .bg {
-  background-image: url(../../assets/img/gradienta-n2XqPm7Bqhk-unsplash.jpg);
+  // background-image: url(../../assets/img/gradienta-n2XqPm7Bqhk-unsplash.jpg);
+  background-image: linear-gradient(to right bottom, #0250c5 0%, #d43f8d 100%);
   background-position: center;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
@@ -39,11 +40,7 @@
         font-family: "ZCOOL QingKe HuangYou", cursive;
       }
       & #flink {
-        background-image: linear-gradient(
-          to right,
-          var(--hover-text-color),
-          #5352ed
-        );
+        background-image: linear-gradient(to right, #3498db, #20bf6b);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -87,13 +84,13 @@
   }
   &__banner {
     width: 45%;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur(4.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(8px);
+    // background: rgba(255, 255, 255, 0.1);
+    // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    // backdrop-filter: blur(4.5px);
+    // -webkit-backdrop-filter: blur(4.5px);
+    // border-radius: 10px;
+    // border: 1px solid rgba(255, 255, 255, 0.1);
+    // -webkit-backdrop-filter: blur(8px);
     @media screen and (max-width: 1361px) {
       height: 100%;
       width: auto;

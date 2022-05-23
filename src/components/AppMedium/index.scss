@@ -51,6 +51,7 @@
 
     &--img {
       width: 400px;
+      border-radius: 4px;
       @media screen and (max-width: 676px) {
         max-width: 80%;
       }
@@ -60,8 +61,114 @@
 
 .third {
   background-color: var(--light-gray-bg);
-  height: 600px;
   z-index: 8;
   transform: translateY(-50px);
   padding: 100px 30px;
+  &__title {
+    color: #1a194d;
+  }
+  &__wrapper {
+    &--card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left {
+      @media screen and (max-width: 976px) {
+        flex-direction: column;
+      }
+    }
+
+    .right {
+      @media screen and (max-width: 976px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &--img {
+      img {
+        width: 465px;
+        @media screen and (max-width: 676px) {
+          width: 90%;
+        }
+      }
+    }
+
+    &--description {
+      width: 465px;
+      @media screen and (max-width: 676px) {
+        width: 90%;
+      }
+    }
+
+    &--img,
+    &--description {
+      // flex: 1 1 0%;
+      padding: 50px;
+      @media screen and (max-width: 976px) {
+        padding: 30px;
+      }
+    }
+    .left &--img {
+      display: flex;
+      justify-content: end;
+    }
+
+    .right &--description {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @media screen and (max-width: 976px) {
+        display: inline-block;
+      }
+    }
+    &--description {
+      h4 {
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        @media screen and (max-width: 976px) {
+          text-align: center;
+          font-size: 24px;
+        }
+      }
+      p {
+        font-size: 18px;
+        text-indent: 4ch;
+        display: inline-block;
+        @media screen and (max-width: 976px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.fourth {
+  padding: 100px;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  transform: translateY(-50px);
+
+  @media screen and (max-width: 600px) {
+    padding: 30px;
+  }
+
+  &__title {
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
+    }
+  }
+
+  &__committer,
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+  &__committer {
+    margin-bottom: 100px;
+    @media screen and (max-width: 600px) {
+      margin-bottom: 30px;
+    }
+  }
 }

@@ -4,6 +4,7 @@ import AppBanner from "../components/AppBannner"
 import AppMedium from "../components/AppMedium"
 import AppFooter from "../components/AppFooter"
 import Seo from "../components/seo"
+import AppShowcase from "../components/AppShowcase"
 
 const IndexPage = () => (
   <>
@@ -11,6 +12,7 @@ const IndexPage = () => (
     {/* <AppHeader /> */}
     <AppBanner />
     <AppMedium />
+    <AppShowcase />
     <AppFooter />
   </>
 )
