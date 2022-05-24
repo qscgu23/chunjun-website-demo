@@ -1,3 +1,4 @@
+const path = require("path")
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -10,6 +11,14 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
     "gatsby-plugin-mantine",
+    //中文文档源
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `docs`,
+        path: path.resolve(__dirname, "../docs"),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,6 +28,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

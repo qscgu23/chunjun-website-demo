@@ -1,0 +1,34 @@
+.menu__layout {
+  display: flex;
+  width: 100%;
+}
+.toggle {
+  position: relative;
+
+  width: 100%;
+}
+
+.toggle__dir {
+  transform: rotate(0) scale(0.9, 1.6);
+  width: 10px;
+  position: absolute;
+  right: 9px;
+}
+.rotate {
+  transform: rotate(90deg) scale(0.9, 1.6);
+}
+.menu {
+  width: 300px;
+  padding: 6px;
+  user-select: none;
+  &__item {
+    color: #333;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: #fafafa;
+    }
+  }
+}
