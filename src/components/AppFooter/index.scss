@@ -1,7 +1,7 @@
 .footer {
-  // background-color: var(--dark-bg);
-  // background-color: red;
-  background-image: linear-gradient(to right bottom, var(--dark-bg), #060718);
-  padding: 30px 100px;
-  height: 600px;
+  text-align: center;
+  color: var(--second-text-color);
+  font-size: var(--font-size-base);
+  line-height: 20px;
+  padding: 30px 0;
 }

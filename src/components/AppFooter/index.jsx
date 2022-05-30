@@ -2,7 +2,11 @@ import "./index.scss"
 import React from "react"
 
 const AppFooter = () => {
-  return <footer className="footer">this footer</footer>
+  return (
+    <footer className="footer">
+      Copyright © 2022 袋鼠云, Inc. Built with Docusaurus.
+    </footer>
+  )
 }
 
 export default AppFooter

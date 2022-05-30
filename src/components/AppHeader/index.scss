@@ -1,6 +1,106 @@
 .header {
-  height: 90px;
-  background-color: var(--dark-bg);
+  height: 64px;
+  padding: 0 360px;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 1724px) {
+    padding: 0 180px;
+  }
+  @media screen and (max-width: 1482px) {
+    padding: 0 90px;
+  }
+  @media screen and (max-width: 1094px) {
+    padding: 0 20px;
+  }
+  &__logo {
+    height: 46px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    font-size: 17px;
+    line-height: 17px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-right: 224px;
+    & img {
+      margin: 0;
+      height: 46px;
+    }
+    @media screen and (max-width: 1094px) {
+      flex: 1 1 0%;
+      margin: 0;
+    }
+  }
+  &__links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 300px;
+    @media screen and (max-width: 1276px) {
+      margin-right: 150px;
+    }
+    @media screen and (max-width: 1094px) {
+      display: none;
+    }
+    &--link {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-base);
+      color: var(--white-color);
+      width: 88px;
+      position: relative;
+      // background-color: red;
+
+      &[aria-current="page"] {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-color: var(--white-color);
+          opacity: 0.1;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 1px;
+          width: 100%;
+          background-color: var(--white-color);
+        }
+      }
+    }
+  }
+  &__utilities {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    #i18n {
+      @media screen and (max-width: 1094px) {
+        display: none;
+      }
+    }
+    #i18n,
+    #burger {
+      height: 100%;
+      width: 88px;
+      text-align: center;
+    }
+    #burger {
+      display: none;
+      @media screen and (max-width: 1094px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
   &__drawer {
     & .mantine-tbarly {
       .drawer__header {
@@ -18,108 +118,15 @@
 
         &--link {
           font-size: 18px;
-          color: #333;
-          font-weight: 600;
-          font-family: "Josefin Sans", sans-serif;
+          color: var(--black-text-color);
+          font-weight: 500;
+          padding: 0 20px;
           &:not(:last-child) {
             margin-bottom: 20px;
           }
           &:hover {
-            color: var(--hover-text-color);
+            color: var(--blue);
           }
-        }
-      }
-    }
-  }
-
-  &__wrapper {
-    margin: 0 10%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    &--link {
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--white-color);
-      position: relative;
-      font-family: "Josefin Sans", sans-serif;
-      display: inline-block;
-    }
-    & div.another__wrapper {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 50%;
-      & .header__wrapper--link {
-        transition: all 0.3s ease-in-out;
-        letter-spacing: 3px;
-        // &:hover {
-        //   color: var(--hover-text-color);
-        //   ::after {
-        //     width: 100%;
-        //   }
-        // }
-        &::after {
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 1px;
-          bottom: 0;
-          left: 0;
-          background-color: var(--hover-text-color);
-          transition: all 0.3s ease-in-out;
-        }
-      }
-
-      @media screen and (max-width: 1344px) {
-        display: none;
-      }
-    }
-    & .function__wrapper {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex: 1 1 0%;
-      &--item:not(:last-child) {
-        margin-right: 20px;
-        @media screen and (max-width: 676px) {
-          margin-right: 10px;
-        }
-      }
-
-      & .burger {
-        display: none;
-        @media screen and (max-width: 1344px) {
-          display: inline-block;
-        }
-      }
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      font-family: "ZCOOL QingKe HuangYou", cursive;
-      font-size: 22px;
-      letter-spacing: 10px;
-      height: 100%;
-      & img {
-        margin: 0;
-      }
-      & span {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        background-image: linear-gradient(to right, #3498db, #20bf6b);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        @media screen and (max-width: 485px) {
-          letter-spacing: -1px;
-        }
-        @media screen and (max-width: 450px) {
-          display: none;
         }
       }
     }

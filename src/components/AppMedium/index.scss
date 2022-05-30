@@ -1,7 +1,6 @@
 .second {
   background-color: var(--dark-bg);
   padding: 100px 30px;
-  transform: translateY(-50px);
   z-index: 9;
   position: relative;
   @media screen and (max-width: 1361px) {
@@ -167,6 +166,9 @@
   }
   &__committer {
     margin-bottom: 100px;
+    & img {
+      max-width: 90%;
+    }
     @media screen and (max-width: 600px) {
       margin-bottom: 30px;
     }

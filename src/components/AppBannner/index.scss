@@ -1,18 +1,19 @@
 .bg {
-  // background-image: url(../../assets/img/gradienta-n2XqPm7Bqhk-unsplash.jpg);
-  background-image: linear-gradient(to right bottom, #0250c5 0%, #d43f8d 100%);
+  // background-image: linear-gradient(to right bottom, #0250c5 0%, #d43f8d 100%);
+  background-image: url(../../assets/img/hero.jpg);
   background-position: center;
   background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
   z-index: 10;
   position: relative;
+  height: 852px;
+  -webkit-clip-path: polygon(100% 0%, 100% 56%, 73% 100%, 9% 80%, 0 28%, 0 0);
+  clip-path: polygon(100% 0%, 100% 56%, 73% 100%, 9% 80%, 0 28%, 0 0);
 }
 
 .container {
-  padding: 30px;
   display: flex;
   align-items: center;
-  // height: calc(100vh);
+  padding: 30px;
 
   @media screen and (max-width: 1361px) {
     flex-direction: column-reverse;
@@ -31,35 +32,21 @@
     }
     &--title {
       color: var(--white-bg);
-      font-size: 30px;
-      line-height: 45px;
-      font-weight: 400;
-      letter-spacing: 5px;
-      & span {
-        font-weight: bold;
-        font-family: "ZCOOL QingKe HuangYou", cursive;
-      }
-      & #flink {
-        background-image: linear-gradient(to right, #3498db, #20bf6b);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        display: inline-block;
-        margin: 0 4px;
-      }
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 33px;
+      letter-spacing: 4px;
       @media screen and (max-width: 1504px) {
-        font-size: 24px;
+        font-size: 18px;
       }
     }
     &--subtitle {
-      background-image: linear-gradient(to right, #3498db, #20bf6b);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      color: var(--white-color);
       display: inline-block;
       margin-bottom: 20px;
-      font-size: 40px;
+      font-size: 56px;
       letter-spacing: 4px;
+      font-weight: 550;
       @media screen and (max-width: 1504px) {
         font-size: 30px;
         margin-bottom: 10px;

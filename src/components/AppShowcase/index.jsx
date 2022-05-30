@@ -100,10 +100,6 @@ const AppShowcase = () => {
       id: "nat-21",
     },
     {
-      img: require("../../assets/img/nat-21.png").default,
-      id: "nat-21",
-    },
-    {
       img: require("../../assets/img/nat-22.png").default,
       id: "nat-22",
     },
