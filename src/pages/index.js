@@ -1,5 +1,4 @@
 import * as React from "react"
-// import AppHeader from "../components/AppHeader"
 import AppBanner from "../components/AppBannner"
 import AppCards from "../components/AppCards"
 import AppFooter from "../components/AppFooter"

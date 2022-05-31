@@ -8,7 +8,7 @@ const AppCards = () => {
       <Card component="a" className="cards__card">
         <Card.Section>
           <Image
-            src={require("../../assets/img/easy.svg").default}
+            src={require("../../assets/img/easy-to-use@2x.png").default}
             height={136}
             width={136}
             alt="No way!"
@@ -27,7 +27,7 @@ const AppCards = () => {
       <Card component="a" className="cards__card">
         <Card.Section>
           <Image
-            src={require("../../assets/img/flink.svg").default}
+            src={require("../../assets/img/flink-png@2x.png").default}
             width={136}
             height={136}
             alt="No way!"
@@ -47,7 +47,7 @@ const AppCards = () => {
       <Card component="a" className="cards__card">
         <Card.Section>
           <Image
-            src={require("../../assets/img/product.svg").default}
+            src={require("../../assets/img/cloud-png@2x.png").default}
             width={136}
             height={136}
             alt="No way!"
