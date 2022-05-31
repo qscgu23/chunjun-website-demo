@@ -14,6 +14,7 @@
   --blue: #5352ed;
 
   --font-size-base: 14px;
+  --font-size-lg: 16px;
 }
 *,
 *::before,
@@ -98,4 +99,17 @@ a:link {
   text-transform: capitalize;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
+}
+
+.flex-padding {
+  padding: 0 360px;
+  @media screen and (max-width: 1724px) {
+    padding: 0 180px;
+  }
+  @media screen and (max-width: 1482px) {
+    padding: 0 90px;
+  }
+  @media screen and (max-width: 1094px) {
+    padding: 0 20px;
+  }
 }

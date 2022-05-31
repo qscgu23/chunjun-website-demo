@@ -43,7 +43,7 @@ const AppHeader = () => {
   ]
 
   return (
-    <header className="header">
+    <header className="header flex-padding">
       <Link to="/" className="header__logo">
         <img src={require("../../assets/img/logo-light.svg").default} alt="" />
         ChunJun

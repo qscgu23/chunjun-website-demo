@@ -1,17 +1,8 @@
 .header {
   height: 64px;
-  padding: 0 360px;
   display: flex;
   align-items: center;
-  @media screen and (max-width: 1724px) {
-    padding: 0 180px;
-  }
-  @media screen and (max-width: 1482px) {
-    padding: 0 90px;
-  }
-  @media screen and (max-width: 1094px) {
-    padding: 0 20px;
-  }
+
   &__logo {
     height: 46px;
     width: 40px;

@@ -1,19 +1,23 @@
 .bg {
-  // background-image: linear-gradient(to right bottom, #0250c5 0%, #d43f8d 100%);
-  background-image: url(../../assets/img/hero.jpg);
-  background-position: center;
+  background-image: url(../../assets/img/bg2x.png);
   background-size: cover;
-  z-index: 10;
   position: relative;
-  height: 852px;
-  -webkit-clip-path: polygon(100% 0%, 100% 56%, 73% 100%, 9% 80%, 0 28%, 0 0);
-  clip-path: polygon(100% 0%, 100% 56%, 73% 100%, 9% 80%, 0 28%, 0 0);
+  min-height: 1122px;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 1504px) {
+    background-position: 70% 50%;
+  }
+  @media screen and (max-width: 676px) {
+    background-position: 65% 50%;
+  }
 }
 
 .container {
   display: flex;
   align-items: center;
-  padding: 30px;
+  margin-top: 143px;
+  position: relative;
 
   @media screen and (max-width: 1361px) {
     flex-direction: column-reverse;
@@ -23,21 +27,25 @@
     flex: 1 1 0%;
     display: flex;
     flex-direction: column;
-    padding: 0 200px;
-    @media screen and (max-width: 676px) {
-      padding: 0 80px;
-    }
-    @media screen and (max-width: 450px) {
-      padding: 0 20px;
-    }
+
     &--title {
       color: var(--white-bg);
       font-size: 24px;
       font-weight: 300;
-      line-height: 33px;
       letter-spacing: 4px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 48px;
       @media screen and (max-width: 1504px) {
         font-size: 18px;
+        text-align: center;
+      }
+      & p {
+        font-weight: 300;
+        color: #ffffff;
+        line-height: 33px;
+        letter-spacing: 4px;
+        display: inline-block;
       }
     }
     &--subtitle {
@@ -67,24 +75,6 @@
           }
         }
       }
-    }
-  }
-  &__banner {
-    width: 45%;
-    // background: rgba(255, 255, 255, 0.1);
-    // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    // backdrop-filter: blur(4.5px);
-    // -webkit-backdrop-filter: blur(4.5px);
-    // border-radius: 10px;
-    // border: 1px solid rgba(255, 255, 255, 0.1);
-    // -webkit-backdrop-filter: blur(8px);
-    @media screen and (max-width: 1361px) {
-      height: 100%;
-      width: auto;
-    }
-    @media screen and (max-width: 1024px) {
-      width: 100%;
-      height: auto;
     }
   }
 }
