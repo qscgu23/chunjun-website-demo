@@ -4,6 +4,7 @@ import { Burger, ActionIcon } from "@mantine/core"
 import { Translate } from "@icon-park/react"
 import AppDrawer from "../AppDrawer"
 import "./index.scss"
+import { headerList } from "../../util"
 
 const AppHeader = () => {
   // const options = [
@@ -19,28 +20,7 @@ const AppHeader = () => {
   const [opened, setOpened] = useState(false)
   // const title = opened ? "Close navigation" : "Open navigation"
 
-  const links = [
-    {
-      name: "首页",
-      path: "/",
-    },
-    {
-      name: "文档",
-      path: "/documents",
-    },
-    {
-      name: "博客",
-      path: "/blogs",
-    },
-    {
-      name: "下载",
-      path: "/download",
-    },
-    {
-      name: "Roadmap",
-      path: "/roadmap",
-    },
-  ]
+  const links = headerList
 
   return (
     <header className="header flex-padding">

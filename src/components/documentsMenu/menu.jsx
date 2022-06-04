@@ -84,7 +84,11 @@ const MenuItem = ({ item, listStyle, re }) => {
                   onClick={() => {
                     toggle(link)
                   }}
-                  className="menu__item"
+                  className={
+                    showMap[link.id]
+                      ? "menu__item menu__item-active"
+                      : "menu__item"
+                  }
                   key={link.name}
                 >
                   <div className="toggle">
@@ -152,15 +156,7 @@ const MenuLayout = ({ children }) => {
   return (
     <>
       <div className="menu__layout">
-        <section className="menu">
-          {MenuItem({ item: menuData })}
-          {/* {nodes.map(link => (
-            <li className="menu__item" key={link.node.id}>
-              {" "}
-              <Link to={`/documents/${link.node.name}`}>{link.node.name}</Link>
-            </li>
-          ))} */}
-        </section>
+        <section className="menu">{MenuItem({ item: menuData })}</section>
         <section style={{ flex: 1, padding: "10px" }}>{children}</section>
       </div>
     </>

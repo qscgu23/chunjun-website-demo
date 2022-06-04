@@ -5,10 +5,11 @@
  */
 const React = require("react")
 const { default: AppHeader } = require("./src/components/AppHeader")
+const { default: AppHeaderWhite } = require("./src/components/AppHeaderWhite")
 
 const Layout = require("./src/components/documentsMenu/menu").default
 const SpaceLayout = require("./src/components/space/spaceLayout").default
-
+const { default: AppFooter } = require("./src/components/AppFooter")
 // You can delete this file if you're not using it
 import("./src/assets/sass/index.scss")
 exports.wrapPageElement = ({ element, props }) => {
@@ -20,8 +21,9 @@ exports.wrapPageElement = ({ element, props }) => {
     <>
       {element.key.includes("documents") ? (
         <>
-          <AppHeader></AppHeader>
+          <AppHeaderWhite></AppHeaderWhite>
           <Layout {...props}>{element}</Layout>
+          <AppFooter></AppFooter>
         </>
       ) : (
         <SpaceLayout {...props}>{element}</SpaceLayout>
