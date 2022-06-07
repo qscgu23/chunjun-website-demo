@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const AppFooter = () => {
   return (
-    <footer className="footer">
+    <footer className="footer flex-padding">
       <div className="footer__wrapper">
         <div className="footer__wrapper--left">
           <Card component="a" className="left__cards--card">

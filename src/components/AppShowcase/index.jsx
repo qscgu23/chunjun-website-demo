@@ -131,18 +131,10 @@ const AppShowcase = () => {
       img: require("../../assets/img/nat-30.png").default,
       id: "nat-30",
     },
-    {
-      img: require("../../assets/img/nat-31.png").default,
-      id: "nat-31",
-    },
-    {
-      img: require("../../assets/img/nat-32.png").default,
-      id: "nat-32",
-    },
   ]
   return (
-    <section className="showcase">
-      <h1 className="section__title showcase__title">我们的合作伙伴</h1>
+    <section className="showcase flex-padding">
+      <h1 className="section__title showcase__title">Sponsors</h1>
       <div className="showcase__wrapper">
         {imgs.map(i => {
           return (

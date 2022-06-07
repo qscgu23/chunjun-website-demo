@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=ZCOOL+QingKe+HuangYou&display=swap");
 :root {
   --white-color: #fff;
   --hover-text-color: #5f27cd;
@@ -99,10 +98,11 @@ a:link {
 
 .section__title {
   text-align: center;
-  font-size: 35px;
+  font-size: 20px;
   text-transform: capitalize;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 600;
+  color: var(--second-text-color);
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 
 .flex-padding {

@@ -1,68 +1,6 @@
-.second {
-  background-color: var(--dark-bg);
-  padding: 100px 30px;
-  z-index: 9;
-  position: relative;
-  @media screen and (max-width: 1361px) {
-    transform: translateY(-60px);
-  }
-  @media screen and (max-width: 1600px) {
-    padding: 70px 30px;
-  }
-  &__title {
-    text-align: center;
-    font-size: 35px;
-    color: var(--white-color);
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 600;
-  }
-  &__wrapper {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    // background-color: red;
-    padding: 30px 20px;
-    grid-template-columns: repeat(3, 1fr);
-    @media screen and (max-width: 1600px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    @media screen and (max-width: 676px) {
-      padding: 10px 0;
-    }
-    gap: 80px;
-    justify-items: center;
-    &--card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      & .card__title {
-        font-size: 24px;
-        color: var(--white-color);
-        text-align: center;
-        margin: 20px 0;
-      }
-      & .card__text {
-        font-size: 18px;
-        display: inline-block;
-        // width: 400px;
-      }
-    }
-
-    &--img {
-      width: 400px;
-      border-radius: 4px;
-      @media screen and (max-width: 676px) {
-        max-width: 80%;
-      }
-    }
-  }
-}
-
-.third {
-  background-color: var(--light-gray-bg);
+.chunjun {
   z-index: 8;
   transform: translateY(-50px);
-  padding: 100px 30px;
   &__title {
     color: #1a194d;
   }
@@ -124,16 +62,16 @@
     }
     &--description {
       h4 {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 400;
         margin-bottom: 30px;
         @media screen and (max-width: 976px) {
           text-align: center;
-          font-size: 24px;
+          font-size: 20px;
         }
       }
       p {
-        font-size: 18px;
+        font-size: var(--font-size-lg);
         text-indent: 4ch;
         display: inline-block;
         @media screen and (max-width: 976px) {
@@ -146,8 +84,7 @@
 
 .fourth {
   padding: 100px;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  transform: translateY(-50px);
+  margin-bottom: 30px;
 
   @media screen and (max-width: 600px) {
     padding: 30px;
@@ -167,7 +104,7 @@
   &__committer {
     margin-bottom: 100px;
     & img {
-      max-width: 90%;
+      max-width: 100%;
     }
     @media screen and (max-width: 600px) {
       margin-bottom: 30px;
