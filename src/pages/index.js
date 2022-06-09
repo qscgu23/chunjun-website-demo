@@ -5,7 +5,7 @@ import AppFooter from "../components/AppFooter"
 import AppShowcase from "../components/AppShowcase"
 import AppMedium from "../components/AppMedium"
 import Seo from "../components/seo"
-
+import "aos/dist/aos.css"
 const IndexPage = () => (
   <>
     <Seo title="纯钧" />

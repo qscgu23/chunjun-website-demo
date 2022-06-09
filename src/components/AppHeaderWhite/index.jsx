@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { Burger, ActionIcon } from "@mantine/core"
 import { Translate } from "@icon-park/react"
 import AppDrawer from "../AppDrawer"
@@ -7,18 +7,10 @@ import "./index.scss"
 import { headerList } from "../../util"
 
 const AppHeaderWhite = () => {
-  // const options = [
-  //   {
-  //     label: "简体中文",
-  //     key: "zh_Hans",
-  //   },
-  //   {
-  //     label: "English",
-  //     key: "en",
-  //   },
-  // ]
   const [opened, setOpened] = useState(false)
   // const title = opened ? "Close navigation" : "Open navigation"
+
+  const activePath = window.location.pathname.split("/")[1]
 
   const links = headerList
 
@@ -34,7 +26,15 @@ const AppHeaderWhite = () => {
         </Link>
         <ul className="header__links">
           {links.map(l => (
-            <Link to={l.path} key={l.path} className="header__links--link ">
+            <Link
+              to={l.path}
+              key={l.path}
+              className={
+                activePath !== l.key
+                  ? "header__links--link"
+                  : "header__links--link-active"
+              }
+            >
               {l.name}
             </Link>
           ))}
@@ -73,7 +73,7 @@ const AppHeaderWhite = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="drawer__wrapper--link"
+                className={"drawer__wrapper--link"}
               >
                 {link.name}
               </Link>

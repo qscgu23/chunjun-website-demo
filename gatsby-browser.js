@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
+require("./src/styles/global.css")
 const React = require("react")
 const { default: AppHeader } = require("./src/components/AppHeader")
 const { default: AppHeaderWhite } = require("./src/components/AppHeaderWhite")
