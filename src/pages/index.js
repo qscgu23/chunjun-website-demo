@@ -14,7 +14,10 @@ const IndexPage = () => (
     <AppCards />
 
     <AppMedium />
-    <div className="w-full relative my-3" style={{ height: `400px` }}>
+    <div
+      className="w-full bg-white relative my-3"
+      style={{ height: `400px`, overflowX: "auto" }}
+    >
       <Flow></Flow>
     </div>
     <AppShowcase />

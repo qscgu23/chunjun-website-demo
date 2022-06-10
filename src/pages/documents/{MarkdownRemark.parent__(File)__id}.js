@@ -3,14 +3,15 @@ import { graphql, navigate, useStaticQuery } from "gatsby"
 import "./index.scss"
 import "./md.css"
 import { buildMenu, getFileArr } from "../../util"
-import { State } from "../../components/documentsMenu/menu"
-
+import "../../font/iconfont.css"
+import AppFooter from "../../components/AppFooter"
 const BlogPost = props => {
   // const menuData = buildMenu(ldata.allFile.edges.map(item => item.node))
 
   const menuData = buildMenu(props.data.allFile.edges.map(item => item.node))
   const fileList = getFileArr(menuData.children)
   const html = props.data.markdownRemark.html
+  const tableOfContents = props.data.markdownRemark.tableOfContents
   const data = props.data.markdownRemark
   const title = data.parent.name
   const modifiedTime = data.parent.modifiedTime
@@ -55,28 +56,56 @@ const BlogPost = props => {
 
   return (
     <>
-      <div className="markdown-body">
-        <h1 className="md__title"> {title} </h1>
-        <h3 className="md__tag">
-          最后修改于 : {new Date(modifiedTime).toLocaleDateString()}{" "}
-        </h3>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
-      <div className="btn-group">
-        <button
-          className="go-btn pre-btn border border-gray-200 text-base shadow-sm hover:shadow"
-          onClick={goPre}
-        >
-          <p className="top-text">上一篇</p>
-          <p className="bo-text text-xl"> {preName} </p>
-        </button>
-        <button
-          className="go-btn next-btn border border-gray-200 text-base shadow-sm hover:shadow"
-          onClick={goNext}
-        >
-          <p className="top-text">下一篇</p>
-          <p className="bo-text text-2xl"> {nextName} </p>
-        </button>
+      <div className="p-5 document-content relative">
+        <div className="flex">
+          <section
+            className="markdown-body flex-1 mr-3 pr-3"
+            style={{ minHeight: "50vh" }}
+          >
+            <h1 className="md__title"> {title} </h1>
+            <h3 className="md__tag">
+              最后修改于 : {new Date(modifiedTime).toLocaleDateString()}{" "}
+            </h3>
+
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </section>
+          <section
+            style={{ width: "200px" }}
+            className=" flex-grow-0 flex-shrink-0  table-of-content"
+          >
+            <div
+              className="table-of-content"
+              dangerouslySetInnerHTML={{ __html: tableOfContents }}
+            />
+          </section>
+        </div>
+        <div className="btn-group ">
+          <button
+            className="go-btn pre-btn border flex justify-between items-center border-gray-200 hover:border-blue-400  text-base shadow-sm hover:shadow"
+            onClick={goPre}
+          >
+            <i className="iconfont text-2xl icon-left-line"></i>
+            <div>
+              <p className="top-text">上一篇</p>
+              <p className="bo-text">
+                <span className="font-bold text-3xl">{preName}</span>
+              </p>
+            </div>
+          </button>
+          <button
+            className="go-btn pre-btn border flex justify-between items-center border-gray-200 hover:border-blue-400  text-base shadow-sm hover:shadow"
+            onClick={goNext}
+          >
+            <div>
+              <p className="top-text">下一篇</p>
+              <p className="bo-text">
+                <span className=" text-3xl font-bold">{nextName}</span>
+              </p>
+            </div>
+            <i className="iconfont text-2xl icon-right-line"></i>
+          </button>
+        </div>
+        <AppFooter></AppFooter>
       </div>
     </>
   )
@@ -85,6 +114,7 @@ const BlogPost = props => {
 export const query = graphql`
   query ($id: String) {
     markdownRemark(id: { eq: $id }) {
+      tableOfContents(maxDepth: 2)
       html
       id
       parent {

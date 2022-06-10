@@ -40,3 +40,30 @@
     text-align: left;
   }
 }
+
+.table-of-content {
+  p,
+  a,
+  ul,
+  li,
+  p {
+    padding: 0px;
+    margin: 0;
+    color: black;
+    font-size: 17px;
+    line-height: 33px;
+    display: block;
+  }
+  a {
+    padding: 7px;
+  }
+  a :hover {
+    background-color: #f3f6f7;
+    border: 1px solid black;
+  }
+}
+.document-content {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  margin: 0;
+}

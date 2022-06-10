@@ -16,7 +16,6 @@ import("./src/assets/sass/index.scss")
 exports.wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
   // including location, data, etc - you don't need to pass it
-  console.log(element, "@@@!")
 
   return (
     <>
@@ -24,7 +23,6 @@ exports.wrapPageElement = ({ element, props }) => {
         <>
           <AppHeaderWhite></AppHeaderWhite>
           <Layout {...props}>{element}</Layout>
-          <AppFooter></AppFooter>
         </>
       ) : (
         <SpaceLayout {...props}>{element}</SpaceLayout>

@@ -215,8 +215,8 @@ const MenuLayout = ({ children }) => {
       <State.Provider value={{ fileList }}>
         <div className="menu__layout">
           <section
-            className="menu"
-            style={{ maxHeight: "70vh", overflowY: "auto" }}
+            className="menu document-menu"
+            style={{ height: "calc(100vh - 110px)", overflowY: "auto" }}
           >
             {MenuItem({ item: menuData, active: active, setActive })}
           </section>
