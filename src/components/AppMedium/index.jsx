@@ -13,7 +13,10 @@ const AppMedium = () => {
       <section className="chunjun flex-padding">
         <h1 className="section__title chunjun__title">what is chunjun</h1>
         <div className="chunjun__wrapper">
-          <div data-aos="zoom-in" className="chunjun__wrapper--card left">
+          <div
+            data-aos="zoom-in"
+            className="chunjun__wrapper--card   left flex items-center"
+          >
             <div className="chunjun__wrapper--img">
               <img
                 src={require("../../assets/img/flink-png@2x.png").default}
@@ -27,7 +30,7 @@ const AppMedium = () => {
               </p>
             </div>
           </div>
-          <div data-aos="zoom-in" className="chunjun__wrapper--card right">
+          <div data-aos="zoom-in" className=" chunjun__wrapper--card right">
             <div className="chunjun__wrapper--description">
               <h4>我们开源啦！</h4>
               <p>
