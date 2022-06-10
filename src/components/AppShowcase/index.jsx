@@ -141,15 +141,12 @@ const AppShowcase = () => {
   return (
     <section data-aos={"zoom-in"} className="showcase flex-padding">
       <h1 className="section__title showcase__title">Sponsors</h1>
-      <div className="showcase__wrapper">
+      <div className="flex flex-wrap w-full bg-white p-3">
         {imgs.map(i => {
           return (
-            <img
-              src={i.img}
-              alt=""
-              key={i.id}
-              className="showcase__wrapper--img"
-            />
+            <div className="w-44 h-24 flex items-center p-2">
+              <img src={i.img} alt="" key={i.id} className="w-full" />
+            </div>
           )
         })}
       </div>
