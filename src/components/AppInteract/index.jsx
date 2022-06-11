@@ -29,7 +29,7 @@ const NodesRender = ({ nodes, setDraging, bool }) => {
       {centerNode ? (
         <div
           className={
-            "absolute no-transition center-node bg-purple-400   rounded-full border cursor-move hover:shadow-lg"
+            "absolute no-transition center-node bg-blue-200   rounded-full border cursor-move hover:shadow-lg"
           }
           style={{
             transform: "all 0",
@@ -56,7 +56,7 @@ const NodesRender = ({ nodes, setDraging, bool }) => {
             className={
               node.center
                 ? "absolute no-transition center-node rounded-full  cursor-move hover:shadow-lg"
-                : "absolute no-transition flex justify-center items-center bg-white border-2 border-gray-200 shadow-lg   cursor-move hover:shadow-sm p-3 rounded"
+                : "absolute no-transition flex justify-center items-center bg-white border border-gray-200 shadow-lg   cursor-move hover:shadow-sm p-3 rounded"
             }
             style={{
               top: node.y + "px",
@@ -66,7 +66,8 @@ const NodesRender = ({ nodes, setDraging, bool }) => {
               height: node.height + "px",
               width: node.width + "px",
               backgroundImage: `url(${node.center ? node.img : ""})`,
-              backgroundSize: "100% 100%",
+              backgroundSize: "contain",
+              backgroundPosition: "center",
             }}
           >
             {node.center ? (
@@ -83,18 +84,22 @@ const NodesRender = ({ nodes, setDraging, bool }) => {
             ) : (
               <Popover
                 content={
-                  <div className="select-none">
-                    <p>s 录像， 爱丽丝梦游仙境？</p>
+                  <div className="select-none p-3 text-3xl">
+                    <p> {node.poper} </p>
                   </div>
                 }
               >
                 <div
-                  className="h-full w-full rounded-full"
+                  className="h-full w-full font-bold text-2xl flex justify-center items-center"
                   style={{
                     backgroundImage: `url(${!node.center ? node.img : ""})`,
-                    backgroundSize: "100% 100%",
+                    backgroundSize: "100% auto",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
                   }}
-                ></div>
+                >
+                  {node.text}
+                </div>
               </Popover>
             )}
           </div>
@@ -128,7 +133,7 @@ const EdgesRender = ({ edges, nodes, bool }) => {
             return (
               <g>
                 <path
-                  stroke="purple"
+                  stroke="blue"
                   strokeOpacity="0.1"
                   strokeWidth="10"
                   fill="transparent"
@@ -136,7 +141,7 @@ const EdgesRender = ({ edges, nodes, bool }) => {
                 />
                 <path
                   className="no-transition"
-                  stroke="purple"
+                  stroke="blue"
                   strokeOpacity="1"
                   strokeWidth="1"
                   fill="transparent"

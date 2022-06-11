@@ -1,4 +1,37 @@
 import icon from "./icon.png"
+import doris from "./image/doris-logo.png"
+import elasticsearch from "./image/elasticsearch-logo.png"
+import emqx from "./image/emqx-logo.png"
+import ftp from "./image/ftp-logo.png"
+import hbase from "./image/hbase-logo.png"
+import hive from "./image/hive-logo.jpeg"
+import kafka from "./image/kafka-logo.png"
+import kudu from "./image/kudu-logo.png"
+import mongodb from "./image/mongodb-logo.png"
+import mysql from "./image/mysql-logo.png"
+import oracle from "./image/oracle-logo.png"
+import solr from "./image/solr-logo.png"
+import starrocks from "./image/starrocks-logo.png"
+import center from "./image/chunjun.png"
+const leftList = [emqx, ftp, hbase, hive, kafka, kudu, elasticsearch]
+const leftMap = {
+  0: "emqx",
+  1: "ftp",
+  2: "hbase",
+  3: "hive",
+  4: "kafka",
+  5: "kudu",
+  6: "elasticsearch",
+}
+const rightList = [mongodb, mysql, oracle, solr, starrocks, doris]
+const rightMap = {
+  0: "mongodb",
+  1: "mysql",
+  2: "oracle",
+  3: "solr",
+  4: "starrocks",
+  5: "doris",
+}
 export const getData = ({ width, height }) => {
   let nodes = getNodes({ width, height })
   let edges = getEdges(nodes)
@@ -26,15 +59,17 @@ function getNodes({ width, height }) {
   const nodes = [
     {
       key: "a",
-      img: icon,
+      img: leftList[0],
       width: 50,
       height: 50,
-      x: 166,
-      y: 135,
+      poper: leftMap[0],
+      x: 190,
+      y: 180,
     },
     {
       key: "b",
-      img: icon,
+      img: leftList[1],
+      poper: leftMap[1],
       width: 50,
       height: 50,
       x: 64,
@@ -43,7 +78,8 @@ function getNodes({ width, height }) {
     },
     {
       key: "c",
-      img: icon,
+      img: leftList[2],
+      poper: leftMap[2],
       width: 50,
       height: 50,
       x: 201,
@@ -52,15 +88,17 @@ function getNodes({ width, height }) {
     },
     {
       key: "d",
-      img: icon,
+      img: leftList[3],
+      poper: leftMap[3],
       width: 50,
       height: 50,
-      x: 87,
+      x: 20,
       y: 340,
     },
     {
       key: "e",
-      img: icon,
+      img: leftList[4],
+      poper: leftMap[4],
       width: 50,
       height: 50,
       x: 52,
@@ -68,8 +106,17 @@ function getNodes({ width, height }) {
       size: "big",
     },
     {
+      key: "333",
+      img: leftList[5],
+      poper: leftMap[5],
+      width: 50,
+      height: 50,
+      x: 665,
+      y: 399,
+    },
+    {
       key: "f",
-      img: icon,
+      img: center,
       width: 100,
       height: 100,
       x: 377,
@@ -78,7 +125,8 @@ function getNodes({ width, height }) {
     },
     {
       key: "g",
-      img: icon,
+      img: rightList[0],
+      poper: rightMap[5],
       width: 50,
       height: 50,
       x: 658,
@@ -86,7 +134,8 @@ function getNodes({ width, height }) {
     },
     {
       key: "h",
-      img: icon,
+      img: rightList[1],
+      poper: rightMap[1],
       width: 50,
       height: 50,
       x: 603,
@@ -94,7 +143,8 @@ function getNodes({ width, height }) {
     },
     {
       key: "i",
-      img: icon,
+      img: rightList[2],
+      poper: rightMap[2],
       width: 50,
       height: 50,
       x: 191,
@@ -102,7 +152,8 @@ function getNodes({ width, height }) {
     },
     {
       key: "j",
-      img: icon,
+      img: rightList[3],
+      poper: rightMap[3],
       width: 50,
       height: 50,
       x: 701,
@@ -111,16 +162,18 @@ function getNodes({ width, height }) {
     },
     {
       key: "2",
-      img: icon,
+      img: rightList[4],
+      poper: rightMap[4],
       width: 50,
       height: 50,
-      x: 606,
-      y: 335,
+      x: 500,
+      y: 200,
       size: "big",
     },
     {
       key: "22",
-      img: icon,
+      text: "binLog",
+      poper: "binLog",
       width: 50,
       height: 50,
       x: 539,
@@ -128,25 +181,20 @@ function getNodes({ width, height }) {
     },
     {
       key: "222",
-      img: icon,
+      text: "logMiner",
+      poper: "logMiner",
       width: 50,
       height: 50,
       x: 688,
       y: 98,
-      size: "big",
-    },
-    {
-      key: "333",
-      img: icon,
-      width: 50,
-      height: 50,
-      x: 665,
-      y: 399,
     },
   ].map(node => {
     if (node.size == "big") {
-      node.width = 100
+      node.width = 200
       node.height = 100
+    } else if (!node.center) {
+      node.width = 150
+      node.height = 75
     }
     return {
       ...node,
