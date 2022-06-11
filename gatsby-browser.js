@@ -21,8 +21,10 @@ exports.wrapPageElement = ({ element, props }) => {
     <>
       {element.key.includes("documents") ? (
         <>
-          <AppHeaderWhite></AppHeaderWhite>
-          <Layout {...props}>{element}</Layout>
+          <div style={{ minHeight: "100vh", backgroundColor: "#fff" }}>
+            <AppHeaderWhite></AppHeaderWhite>
+            <Layout {...props}>{element}</Layout>
+          </div>
         </>
       ) : (
         <SpaceLayout {...props}>{element}</SpaceLayout>

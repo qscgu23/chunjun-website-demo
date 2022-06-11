@@ -54,8 +54,11 @@
     line-height: 33px;
     display: block;
   }
+  ul {
+    padding-left: 7px;
+  }
   a {
-    padding: 7px;
+    padding: 3px;
   }
   a :hover {
     background-color: #f3f6f7;
@@ -63,7 +66,7 @@
   }
 }
 .document-content {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   overflow-y: auto;
   margin: 0;
 }

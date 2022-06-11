@@ -114,8 +114,14 @@ const EdgesRender = ({ edges, nodes, bool }) => {
   }, [])
   return (
     <>
-      <div className="absolute bg-white w-full h-full t-0 l-0 border ">
-        <svg height={height} width={width}>
+      <div className="absolute bg-white w-full h-full t-0 l-0 ">
+        <svg
+          strokeWidth={0}
+          stroke={"transparent"}
+          className="border-0"
+          height={height}
+          width={width}
+        >
           {edges.map((edge, i) => {
             let startNode = nodes.find(node => node.key === edge.head)
             let endNode = nodes.find(node => node.key === edge.tail)

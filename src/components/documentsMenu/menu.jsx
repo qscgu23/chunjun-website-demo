@@ -216,11 +216,11 @@ const MenuLayout = ({ children }) => {
         <div className="menu__layout">
           <section
             className="menu document-menu"
-            style={{ height: "calc(100vh - 110px)", overflowY: "auto" }}
+            style={{ height: "calc(100vh - 80px)", overflowY: "auto" }}
           >
             {MenuItem({ item: menuData, active: active, setActive })}
           </section>
-          <section style={{ flex: 1, padding: "10px" }}>{children}</section>
+          <section style={{ flex: 1 }}>{children}</section>
         </div>
       </State.Provider>
     </>

@@ -68,7 +68,7 @@ const AppHeaderWhite = () => {
           size="xl"
           className="header__drawer"
         >
-          <div className="drawer__wrapper">
+          <div className="drawer__wrapper opacity-100">
             {links.map(link => (
               <Link
                 key={link.name}

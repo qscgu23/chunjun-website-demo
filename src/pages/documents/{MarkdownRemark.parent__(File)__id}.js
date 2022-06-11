@@ -56,22 +56,49 @@ const BlogPost = props => {
 
   return (
     <>
-      <div className="p-5 document-content relative">
-        <div className="flex">
+      <div className="p-0  relative">
+        <div className="flex p-0">
           <section
-            className="markdown-body flex-1 mr-3 pr-3"
+            className="markdown-body px-7 document-content flex-1 mr-3 pr-3"
             style={{ minHeight: "50vh" }}
           >
             <h1 className="md__title"> {title} </h1>
-            <h3 className="md__tag">
-              最后修改于 : {new Date(modifiedTime).toLocaleDateString()}{" "}
+            <h3 className="text-sm text-blue-400 text-left">
+              更新于 : {new Date(modifiedTime).toLocaleDateString()}{" "}
             </h3>
 
             <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div className="btn-group ">
+              <button
+                className="go-btn pre-btn border flex justify-between items-center border-gray-200 hover:border-blue-400  text-base shadow-sm hover:shadow"
+                onClick={goPre}
+              >
+                <i className="iconfont text-2xl icon-left-line"></i>
+                <div>
+                  <p className="top-text">上一篇</p>
+                  <p className="bo-text">
+                    <span className="font-bold text-3xl">{preName}</span>
+                  </p>
+                </div>
+              </button>
+              <button
+                className="go-btn pre-btn border flex justify-between items-center border-gray-200 hover:border-blue-400  text-base shadow-sm hover:shadow"
+                onClick={goNext}
+              >
+                <div>
+                  <p className="top-text">下一篇</p>
+                  <p className="bo-text">
+                    <span className=" text-3xl font-bold">{nextName}</span>
+                  </p>
+                </div>
+                <i className="iconfont text-2xl icon-right-line"></i>
+              </button>
+            </div>
+            <AppFooter></AppFooter>
           </section>
           <section
-            style={{ width: "200px" }}
-            className=" flex-grow-0 flex-shrink-0  table-of-content"
+            style={{ width: "250px" }}
+            className=" flex-grow-0 p-0  border-l border-gray-200 flex-shrink-0 pl-5  table-of-content"
           >
             <div
               className="table-of-content"
@@ -79,33 +106,6 @@ const BlogPost = props => {
             />
           </section>
         </div>
-        <div className="btn-group ">
-          <button
-            className="go-btn pre-btn border flex justify-between items-center border-gray-200 hover:border-blue-400  text-base shadow-sm hover:shadow"
-            onClick={goPre}
-          >
-            <i className="iconfont text-2xl icon-left-line"></i>
-            <div>
-              <p className="top-text">上一篇</p>
-              <p className="bo-text">
-                <span className="font-bold text-3xl">{preName}</span>
-              </p>
-            </div>
-          </button>
-          <button
-            className="go-btn pre-btn border flex justify-between items-center border-gray-200 hover:border-blue-400  text-base shadow-sm hover:shadow"
-            onClick={goNext}
-          >
-            <div>
-              <p className="top-text">下一篇</p>
-              <p className="bo-text">
-                <span className=" text-3xl font-bold">{nextName}</span>
-              </p>
-            </div>
-            <i className="iconfont text-2xl icon-right-line"></i>
-          </button>
-        </div>
-        <AppFooter></AppFooter>
       </div>
     </>
   )
