@@ -9,6 +9,7 @@ const { default: AppHeader } = require("./src/components/AppHeader")
 const { default: AppHeaderWhite } = require("./src/components/AppHeaderWhite")
 
 const Layout = require("./src/components/documentsMenu/menu").default
+const JsonLayout = require("./src/components/jsonMenu/menu").default
 const SpaceLayout = require("./src/components/space/spaceLayout").default
 const { default: AppFooter } = require("./src/components/AppFooter")
 // You can delete this file if you're not using it
@@ -19,16 +20,23 @@ exports.wrapPageElement = ({ element, props }) => {
 
   return (
     <>
-      {element.key.includes("documents") ? (
-        <>
+      <div className=" ">
+        {element.key.includes("documents") ? (
+          <>
+            <div style={{ minHeight: "100vh", backgroundColor: "#fff" }}>
+              <AppHeaderWhite></AppHeaderWhite>
+              <Layout {...props}>{element}</Layout>
+            </div>
+          </>
+        ) : element.key.includes("examples") ? (
           <div style={{ minHeight: "100vh", backgroundColor: "#fff" }}>
             <AppHeaderWhite></AppHeaderWhite>
-            <Layout {...props}>{element}</Layout>
+            <JsonLayout {...props}>{element}</JsonLayout>
           </div>
-        </>
-      ) : (
-        <SpaceLayout {...props}>{element}</SpaceLayout>
-      )}
+        ) : (
+          <SpaceLayout {...props}>{element}</SpaceLayout>
+        )}
+      </div>
     </>
   )
 }

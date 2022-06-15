@@ -25,6 +25,7 @@
     "gatsby-remark-table-of-contents": "^2.0.0",
     "gatsby-source-filesystem": "^4.14.0",
     "gatsby-transformer-json": "^4.15.0",
+    "gatsby-transformer-plaintext": "^2.0.0",
     "gatsby-transformer-remark": "^5.14.0",
     "gatsby-transformer-sharp": "^4.14.0",
     "node-sass": "^6.0.1",
@@ -33,6 +34,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-json-view": "^1.21.3",
     "tailwindcss": "^3.1.0"
   },
   "devDependencies": {

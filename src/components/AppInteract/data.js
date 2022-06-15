@@ -58,13 +58,32 @@ function getEdges(nodes) {
 function getNodes({ width, height }) {
   const nodes = [
     {
-      key: "a",
-      img: leftList[0],
+      key: "22",
+      text: "binLog",
+      poper: "binLog",
       width: 50,
       height: 50,
-      poper: leftMap[0],
-      x: 190,
-      y: 180,
+      x: 100,
+      y: 250,
+    },
+    {
+      key: "g",
+      img: rightList[0],
+      poper: rightMap[5],
+      width: 50,
+      height: 50,
+      x: 240,
+      y: 400,
+    },
+    {
+      key: "222",
+      text: "logMiner",
+      poper: "logMiner",
+      width: 50,
+      height: 50,
+
+      x: 64,
+      y: 164,
     },
     {
       key: "b",
@@ -72,8 +91,8 @@ function getNodes({ width, height }) {
       poper: leftMap[1],
       width: 50,
       height: 50,
-      x: 64,
-      y: 164,
+      x: 688,
+      y: 98,
       size: "big",
     },
     {
@@ -112,7 +131,7 @@ function getNodes({ width, height }) {
       width: 50,
       height: 50,
       x: 665,
-      y: 399,
+      y: 500,
     },
     {
       key: "f",
@@ -123,15 +142,7 @@ function getNodes({ width, height }) {
       y: 274,
       center: true,
     },
-    {
-      key: "g",
-      img: rightList[0],
-      poper: rightMap[5],
-      width: 50,
-      height: 50,
-      x: 658,
-      y: 155,
-    },
+
     {
       key: "h",
       img: rightList[1],
@@ -148,7 +159,7 @@ function getNodes({ width, height }) {
       width: 50,
       height: 50,
       x: 191,
-      y: 453,
+      y: 550,
     },
     {
       key: "j",
@@ -166,27 +177,18 @@ function getNodes({ width, height }) {
       poper: rightMap[4],
       width: 50,
       height: 50,
-      x: 500,
-      y: 200,
+      x: 600,
+      y: 300,
       size: "big",
     },
     {
-      key: "22",
-      text: "binLog",
-      poper: "binLog",
+      key: "a",
+      img: leftList[0],
       width: 50,
       height: 50,
+      poper: leftMap[0],
       x: 539,
-      y: 435,
-    },
-    {
-      key: "222",
-      text: "logMiner",
-      poper: "logMiner",
-      width: 50,
-      height: 50,
-      x: 688,
-      y: 98,
+      y: 600,
     },
   ].map(node => {
     if (node.size == "big") {

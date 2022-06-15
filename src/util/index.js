@@ -9,6 +9,11 @@ export const headerList = [
     key: "documents",
   },
   {
+    name: "案例",
+    path: "/examples",
+    key: "examples",
+  },
+  {
     name: "博客",
     path: "/blogs",
     key: "blogs",

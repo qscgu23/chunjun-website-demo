@@ -16,7 +16,7 @@ const IndexPage = () => (
     <AppMedium />
     <div
       className="w-full bg-white relative my-3"
-      style={{ height: `400px`, overflowX: "auto" }}
+      style={{ height: `500px`, overflowX: "auto" }}
     >
       <Flow></Flow>
     </div>

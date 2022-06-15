@@ -20,10 +20,10 @@ module.exports = {
         path: path.resolve(__dirname, "../docs"),
       },
     },
-    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `examples`,
         path: path.resolve(__dirname, "../examples"),
       },
     },
@@ -37,6 +37,8 @@ module.exports = {
 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `json-content`,
+    //  `gatsby-transformer-plaintext`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

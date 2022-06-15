@@ -56,10 +56,10 @@ const BlogPost = props => {
 
   return (
     <>
-      <div className="p-0  relative">
-        <div className="flex p-0">
+      <div className="p-0 dark:bg-black dark:text-white relative">
+        <div className="dark:bg-black flex p-0">
           <section
-            className="markdown-body px-7 document-content flex-1 mr-3 pr-3"
+            className="dark-markdown-body dark:bg-black px-7 document-content flex-1 mr-3 pr-3"
             style={{ minHeight: "50vh" }}
           >
             <h1 className="md__title"> {title} </h1>
